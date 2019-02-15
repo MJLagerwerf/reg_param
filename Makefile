@@ -81,12 +81,14 @@ servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C doc_sources html' -R -D .
 
 install: clean ## install the package to the active Python's site-packages
+	conda install -c astra-toolbox astra-toolbox -y 
 	python setup.py install
 
 install_dev:
 	# https://stackoverflow.com/a/28842733
+	conda install -c astra-toolbox astra-toolbox -y 
 	pip install -e .[dev]
 
-conda_package:
+conda_package: 
 	conda install conda-build -y
-	conda build conda/
+	conda build conda/ -c astra-toolbox -c odlgroup

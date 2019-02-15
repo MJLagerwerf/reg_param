@@ -3,7 +3,7 @@
 """Top-level package for Regularization parameter estimation."""
 
 __author__ = """Rien Lagerwerf"""
-__email__ = 'rienlagerwerf@gmail.com'
+__email__ = 'm.j.lagerwerf@cwi.nl'
 
 
 def __get_version():
@@ -17,4 +17,13 @@ def __get_version():
 __version__ = __get_version()
 
 # Import all definitions from main module.
-from .reg_param import *
+from .reg_param import hello_world
+from .problem_class import problem_definition_class
+from .method_class import method_class
+from .interp_class import recon_class, interp_class, recon_class_noref, interp_class_noref
+from .interp_2param_class import recon_2param_class, interp_2param_class
+
+# Denk ff na over welke ik echt nodig heb
+from .support_functions import *
+
+

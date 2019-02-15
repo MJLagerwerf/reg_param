@@ -16,6 +16,14 @@ with open(os.path.join('reg_param','VERSION')) as version_file:
     version = version_file.read().strip()
 
 requirements = [
+	'astra-toolbox',
+	'scipy',
+	'odl',
+	'matplotlib',
+	'tqdm',
+	'tabulate',
+	'numba==0.40.0',
+	'llvmlite==0.25.0'
     # Add your project's requirements here, e.g.,
     # 'astra-toolbox',
     # 'sacred>=0.7.2',
@@ -47,7 +55,7 @@ dev_requirements = [
 
 setup(
     author="Rien Lagerwerf",
-    author_email='rienlagerwerf@gmail.com',
+    author_email='m.j.lagerwerf@cwi.nl',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
@@ -57,7 +65,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="Supporting code for the regularization parameter estimation paper.",
+    description="Supporting code for the regularization parameter estimation paper. ",
     install_requires=requirements,
     license="GNU General Public License v3",
     long_description=readme + '\n\n' + history,

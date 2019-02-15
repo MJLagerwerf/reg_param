@@ -1,15 +1,12 @@
 # Regularization parameter estimation
 
-Supporting code for the regularization parameter estimation paper.
-
-This paragraph should contain a high-level description of the package, with a
-brief overview of its features and limitations.
-
+Supporting code for the paper "An efficient interpolation approach for exploring the parameter
+space of regularized tomography algorithms", which is currently being reviewed. This codes gives an efficient framework for estimating regularization parameters.
 
 * Free software: GNU General Public License v3
 * Documentation: [https://mjlagerwerf.github.io/reg_param]
 
-
+<!---
 ## Readiness
 
 The author of this package is in the process of setting up this
@@ -56,10 +53,10 @@ package for optimal usability. The following has already been completed:
     - Conda packages have been built successfully with `make conda_package`.
 	- These conda packages have been uploaded to [Anaconda](https://anaconda.org).
 	- The installation instructions (below) have been updated.
-
+-->
 ## Getting Started
 
-It takes a few steps to setup Regularization parameter estimation on your
+It takes a few steps to setup the regularization parameter estimation software on your
 machine. We recommend installing
 [Anaconda package manager](https://www.anaconda.com/download/) for
 Python 3.
@@ -68,7 +65,8 @@ Python 3.
 
 Simply install with:
 ```
-conda install -c cicwi reg_param
+conda install -c mjlagerwerf -c odlgroup -c astra-toolbox reg_param
+
 ```
 
 ### Installing from source
