@@ -1,0 +1,34 @@
+
+{% set data = load_setup_py_data() %}
+
+package:
+    name: reg_param
+    
+    version: {{ data['version'] }}
+
+source:
+    path: ../
+
+build:
+    number: '0'
+
+requirements:
+    build:
+        - python
+        - setuptools
+
+    run:
+        - python
+        # dependencies are defined in setup.py
+        {% for dep in data['install_requires'] %}
+        - {{ dep.lower() }}
+        {% endfor %}
+
+about:
+    home: https://github.com/mjlagerwerf/reg_param
+    license_file: LICENSE.md
+    summary: "Supporting code for the regularization parameter estimation paper."
+
+extra:
+    maintainers:
+        - Rien Lagerwerf
