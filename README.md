@@ -76,7 +76,7 @@ project. Go to the cloned directory and run PIP installer:
 ```
 git clone https://github.com/mjlagerwerf/reg_param.git
 cd reg_param
-pip install -e .
+make install_dev
 ```
 
 ### Running the examples
